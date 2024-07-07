@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "./articles/article_search"
+import "./articles/article_search.js"
