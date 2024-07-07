@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Search and Analytics Tool README! This tool is work
+Welcome to the InstaSearch README!
 
 ## Features
 
@@ -37,6 +37,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    rails db:create
    rails db:migrate
+   rails db:seed
    ```
 
 4. Start the Rails server:
