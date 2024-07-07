@@ -17,14 +17,13 @@ function handleSearchInput(event) {
   if (event.target.value.length === 0) {
     clearTimeout(typingTimer);
     searchResults.innerHTML = "";
-    spinner.style.display = "none"; // Show spinner
+    spinner.style.display = "none"; // Hide spinner
     return;
   }
 
   searchResults.innerHTML = "";
   clearTimeout(typingTimer);
 
-  //toggleSpinner();
   spinner.style.display = "block"; // Show spinner
 
   let query = event.target.value;
@@ -43,7 +42,6 @@ function handleSearchInput(event) {
         //do somethig with articles
         let results = articles.results;
         if (!results.length) {
-          //toggleSpinner();
           spinner.style.display = "none"; // Hide spinner
 
           searchResults.innerHTML = "No results found";
@@ -60,13 +58,3 @@ function handleSearchInput(event) {
       });
   }, typingDelay);
 }
-
-/*
-function toggleSpinner() {
-  if (spinner.style.display === "none") {
-    spinner.style.display = "block"; // Show spinner
-  } else {
-    spinner.style.display = "none"; // Hide spinner
-  }
-}
-*/
