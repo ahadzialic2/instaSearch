@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  background-color: lightblue;
+  text-align: left;
+  top: 0;
+  padding: 10px !important;
+}
+.menu {
+  display: none;
+}
+.navbar ul {
+  list-style-type: none;
+}
+
+.analytics-tab {
+  display: block;
+  margin-left: auto;
+}
+
+.hamburger-menu {
+  display: none; /* Hide hamburger menu by default */
+}
+
+.sidebar {
+  z-index: 1000;
+  position: absolute;
+  left: -250px; /* Start off-screen */
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: lightblue;
+  padding-top: 50px; /* Match header height */
+  transition: left 0.3s ease;
+}
+
+/* Media query for mobile */
+@media (max-width: 480px) {
+  .analytics-tab {
+    display: none;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    float: right;
+    margin-left: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: box shadow */
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  width: 300px; /* Adjust width as needed */
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.spinner {
+  display: none;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#search-results {
+  margin-top: 100px;
+}
+
+.pills {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}

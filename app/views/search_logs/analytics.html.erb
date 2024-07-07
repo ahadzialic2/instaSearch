@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <%= stylesheet_link_tag 'article_search',media: 'all', data: { turbolinks: false } %>
+    <%= stylesheet_link_tag 'analytics',media: 'all', data: { turbolinks: false } %>
+
+</head>
+<header>
+    <div class="logo">
+        <%= image_tag("logo.png", height: 50, width: 50) %>
+        <div class="logo-text">
+        <h1>InstaSearch</h1>
+        <h5>
+            your search and&nbsp<b style="font-weight: bold; color: red;">analytics</b>&nbspengine
+        </h5>
+        </div>
+        <div class="analytics-tab">
+        <ul>
+            <li><%= link_to 'InstaSearch for articles', "#{Rails.configuration.base_url}/articles", target: '_blank' %></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+        <div id="menu" class="hamburger-menu">
+        <i class="fas fa-bars fa-3x"></i>
+        </div>
+    </div>
+</header>
+
+<body>
+
+<div id="side-nav" class="sidebar">
+        <ul>
+            <li><%= link_to 'InstaSearch for articles', "#{Rails.configuration.base_url}/articles", target: '_blank'  %></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+<h1>Search analytics</h1>
+
+<table>
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Top 5 Searches</td>
+                <td>
+                    <ul>
+                        <% @query_counts.each do |query, count| %>
+                            <p><%= "#{query}: #{count}" %></p>
+                        <% end %>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Most Searched Term</td>
+                <td>
+                    <%= @most_searched_term %>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Searches</td>
+                <td>
+                    <%= @total_searches %>
+                </td>
+            </tr>
+            <tr>
+                <td>Average Searches per Day</td>
+                <td>
+                    <%= @average_searches_per_day %>
+                </td>
+            </tr>
+            <tr>
+                <td>Average Searches per user</td>
+                <td>
+                    <%= @average_searches_per_user %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
