@@ -8,9 +8,8 @@
 
 case Rails.env
 when "development" || "test" || "production"
-  puts "development environment"
   puts "starting to seed the database"
-50.times do |iter|
+  50.times do |iter|
   Article.create(name: Faker::Device.unique.model_name)
 end
 #puts "finished seeding the database"

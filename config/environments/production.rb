@@ -91,8 +91,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-
   config.base_url = "https://insta-search-tool-fc3fbd48f589.herokuapp.com"
 
 end
