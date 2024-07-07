@@ -40,6 +40,13 @@
 
 <h1>Search analytics</h1>
 
+<% if @query_counts.present? && 
+@most_searched_term.present? && 
+@total_searches.present? &&
+@average_searches_per_day.present? &&
+@average_searches_per_user.present?
+%>
+
 <table>
         <thead>
             <tr>
@@ -84,4 +91,7 @@
             </tr>
         </tbody>
     </table>
+    <% else %>
+        <p>We just started, search more to see analytics!</p>
+    <% end %>
 </body>
