@@ -5,7 +5,7 @@ const menu = document.getElementById("menu");
 const sidebar = document.getElementById("side-nav");
 
 let typingTimer; // Timer identifier
-const typingDelay = 3000; // Delay in milliseconds (3 seconds)
+const typingDelay = 1500; // Delay in milliseconds (3 seconds)
 
 menu.addEventListener("click", (event) => {
   sidebar.style.left = sidebar.style.left === "-250px" ? "0" : "-250px";
