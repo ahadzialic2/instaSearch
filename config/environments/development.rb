@@ -70,6 +70,4 @@ Rails.application.configure do
 
   # log raw sql when debugging in console
   config.log_level = :debug
-
-  config.base_url = "http://localhost:5000"
 end
