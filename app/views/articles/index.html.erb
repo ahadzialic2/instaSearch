@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <%= stylesheet_link_tag 'article_search',media: 'all', data: { turbolinks: false } %>
+    <% content_for :javascript do %>
+      <%= javascript_include_tag 'articles/article_search' %>
+    <% end %>
 </head>
 
 <body>
@@ -20,7 +23,7 @@
 
             <div class="analytics-tab">
                 <ul>
-                <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics", target: '_blank'  %></li>
+                <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics" %></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 </ul>
@@ -33,7 +36,7 @@
     
     <div id="side-nav" class="sidebar">
         <ul>
-            <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics", target: '_blank'  %></li>
+            <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics" %></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
