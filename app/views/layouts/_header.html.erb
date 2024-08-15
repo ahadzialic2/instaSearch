@@ -1,0 +1,40 @@
+<header>
+    <div class="logo">
+      <a class="logo" href="<%= Rails.configuration.base_url %>/articles">
+        <%= image_tag("logo.png", height: 50, width: 50) %>
+        <div class="logo-text">
+        <h1>InstaSearch</h1>
+        <h5>
+            your search and&nbsp<b style="font-weight: bold; color: red;">analytics</b>&nbspengine
+        </h5>
+        </div>
+      </a>
+        <div class="analytics-tab">
+        <ul>
+            <% if analytics_data.present? %>
+              <li><%= link_to 'InstaSearch for articles', "#{Rails.configuration.base_url}/articles" %></li>
+            <% else %>
+              <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics" %></li>
+            <% end %>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+        <div id="menu" class="hamburger-menu">
+        <i class="fas fa-bars fa-3x"></i>
+        </div>
+    </div>
+
+    <div id="side-nav" class="sidebar">
+            <ul>
+                <% if analytics_data.present? %>
+                  <li><%= link_to 'InstaSearch for articles', "#{Rails.configuration.base_url}/articles" %></li>
+                <% else %>
+                  <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics" %></li>
+                <% end %>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </div>
+      <%= javascript_include_tag 'header/header' %>
+</header>

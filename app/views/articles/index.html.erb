@@ -5,55 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <%= stylesheet_link_tag 'article_search',media: 'all', data: { turbolinks: false } %>
+    <%= stylesheet_link_tag 'header',media: 'all', data: { turbolinks: false } %>
+
     <% content_for :javascript do %>
       <%= javascript_include_tag 'articles/article_search' %>
     <% end %>
 </head>
-
-<body>
-    <header>
-        <div class="logo">
-            <%= image_tag("logo.png", height: 50, width: 50) %>
-            <div class="logo-text">
-            <h1>InstaSearch</h1>
-            <h5>
-            your search and&nbsp<b style="font-weight: bold; color: red;">analytics</b>&nbspengine
-            </h5>
+    <body>
+        <%= render 'layouts/header', analytics_data: nil %>
+        
+        <div class="container">
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <div class="input-search">
+                        <input type="search" id="search-input" class="search-box" placeholder="Type to search..."/>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div id="spinner" class="spinner"></div>
             </div>
-
-            <div class="analytics-tab">
-                <ul>
-                <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics" %></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div id="menu" class="hamburger-menu">
-                <i class="fas fa-bars fa-3x"></i>
-          </div>
+            <ul class="pills">
+                <div id="search-results" class="search-results"></div> 
+            </ul>
         </div>
-    </header>
-    
-    <div id="side-nav" class="sidebar">
-        <ul>
-            <li><%= link_to 'Analytics', "#{Rails.configuration.base_url}/analytics" %></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-    <div class="container">
-    <div class="search-container">
-    <div class="search-wrapper">
-        <input type="search" id="search-input" class="search-box" placeholder="Type to search..."/>
-        <i class="fas fa-search"></i>
-    </div>
-    <br/>
-    <br/>
-
-    <div id="spinner" class="spinner"></div>
-    </div>
-    <ul class="pills">
-    <div id="search-results" class="search-results"></div> 
-    </ul>
-    </div>
- </body>
+    </body>

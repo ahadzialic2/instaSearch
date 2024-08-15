@@ -2,15 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let input = document.getElementById("search-input");
   const spinner = document.getElementById("spinner");
   let searchResults = document.getElementById("search-results");
-  const menu = document.getElementById("menu");
-  const sidebar = document.getElementById("side-nav");
 
   let typingTimer; // Timer identifier
   const typingDelay = 1500; // Delay in milliseconds (3 seconds)
-
-  menu.addEventListener("click", (event) => {
-    sidebar.style.left = sidebar.style.left === "-250px" ? "0" : "-250px";
-  });
 
   input.addEventListener("keyup", handleSearchInput);
 
