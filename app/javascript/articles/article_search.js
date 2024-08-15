@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   input.addEventListener("keyup", handleSearchInput);
 
   function handleSearchInput(event) {
-    console.log("searching...");
     if (event.target.value.length === 0) {
       clearTimeout(typingTimer);
       searchResults.innerHTML = "";

@@ -6,6 +6,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .search-box {
@@ -16,7 +17,7 @@
 
 .input-search i {
   position: absolute;
-  right: 15px;
+  right: 30px;
   font-size: 18px;
   color: #aaa;
 }
@@ -50,6 +51,7 @@ body {
   background-color: white;
   padding: 10px;
   border-radius: 5px;
+  width: 100%;
   /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: box shadow */
 }
 
@@ -58,12 +60,13 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .search-box {
-  width: 300px; /* Adjust width as needed */
+  width: 100%;
   padding: 10px;
-  margin-right: 10px;
+  margin: 20px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -71,8 +74,8 @@ body {
 
 .spinner {
   display: none;
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
   border-radius: 50%;
   width: 20px;
   height: 20px;
