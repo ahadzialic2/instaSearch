@@ -1,5 +1,5 @@
 # Search and Analytics Tool - InstaSearch 
-[Live site: https://insta-search-tool-fc3fbd48f589.herokuapp.com/](https://insta-search-tool-fc3fbd48f589.herokuapp.com/)
+Live site: [https://insta-search-tool-fc3fbd48f589.herokuapp.com/](https://insta-search-tool-fc3fbd48f589.herokuapp.com/)
 ## Overview
 
 Welcome to the InstaSearch README!
