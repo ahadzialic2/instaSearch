@@ -1,13 +1,28 @@
 # Search and Analytics Tool - InstaSearch 
 Live site: [https://insta-search-tool-fc3fbd48f589.herokuapp.com/](https://insta-search-tool-fc3fbd48f589.herokuapp.com/)
-## Overview
+## Overview and description
 
 Welcome to the InstaSearch README!
+
+App records users input in realtime and ultimately display analytics &
+trends on what people are searching for the most.
+
+The problem I tackled on this project is so-called "pyramid problem" in search and here is my solution.
+Algorithm for instant search and pyramid problem solution:
+My approach to solving the pyramid problem involves configuring a timeout interval for each key press. If the timeout is triggered—that is, if the user doesn't trigger it again by hitting a key—the application will call the backend, which will compare whether the current search query was completed 30 seconds later than the previous one. This is how I would go about removing partial or incomplete inquiries. When a user searches for "iPhone," the "iPhone SE" application will only record the last query if the user stays on the results page (scrolls down, etc.) for a few seconds (no more than 30 seconds, which is my median for average user). If the user searches for "iPhone" and then after 30 seconds, the "iPhone SE" application considers it a new query and saves it to the database.
+It is evident, in that situation, that the typical user was drawn in by the results, which suggests that the query was relevant.
+
+My position is supported by fact that semantics play major role in searches. For example, if user searched "BMW", that query is very reasonable because he searches "globally".
+If he later specifically searches "BMW m4" that is semantically considered a new search query (user scales its search).
+
+Analytics: 
+I gather simple analytics based on bulk data (from all Ip addresses).
+There are many possible improvement I could make and major one is filter by date, users, etc..
 
 ## Features
 
 - **Search Functionality:** Allows users to search for specific articles within application.
-- **Analytics Dashboard:** Provides visualizations and reports on search trends, popular queries, and user behavior patterns.
+- **Analytics Dashboard:** Provides reports on search trends, popular queries, and user behavior patterns.
 
 ## Getting Started
 
